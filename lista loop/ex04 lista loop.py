@@ -1,13 +1,14 @@
+soma = 0
 i = 0
-qtd_num = 5
-while i > qtd_num:
-    while True:
-        numeros = input('Digite um número:')
-        if numeros.isnumeric():
-            numeros = int(numeros)
-            soma += numeros
-            media = soma/qtd_num
-            i += 1
-            break
+while i < 5:
+    num = input('Digite um número: ')
+    if num.isnumeric():
+        num = int(num)
+        i += 1
+        soma = num + soma
+        media = soma/i
+    else:
+        print('Digite um valor válido!')
 
-    print(soma,media)
+print(soma)
+print(media)
