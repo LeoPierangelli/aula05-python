@@ -6,9 +6,9 @@ while i < 5:
         num = int(num)
         i += 1
         soma = num + soma
-        media = soma/i
     else:
         print('Digite um valor válido!')
 
+media = soma/i
 print(soma)
 print(media)

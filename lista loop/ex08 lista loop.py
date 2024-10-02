@@ -6,14 +6,13 @@ while True:
     else:
         print('Insira um valor válido!')
 
-
-i = 0
-l = 0
-t = 1
-while i < num:
-    aux = t + l
-    t = aux + l
-    l = t + aux
+a = 0
+b = 1
+i = 1
+print(f'1ºnúmero: {b}')
+while num > i:
+    c = a + b
+    a = b
+    b = c
     i += 1
-
-print(aux)
+    print(f'{i}ºnumero: {c}')
