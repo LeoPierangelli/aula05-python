@@ -1,19 +1,20 @@
-i = 0
-b = 10
-while i < b:
+numero1 = input('Digite o menor numero: ')
+while not numero1.isnumeric():
     numero1 = input('Digite o menor numero: ')
-    if numero1.isnumeric():
-        numero1 = int(numero1)
-        while i < b:
-            numero2 = input('Digite o maior numero: ')
-            if numero2.isnumeric():
-                numero2 = int(numero2)
-                while numero1 < numero2-1:
-                    numero1 += 1
-                    b = numero2
-                    i += 2
-                    print(numero1)
-            else:
-                print('Digite um valor válido!')
-    else:
-        print('Digite um valor válido!')
+numero1 = int(numero1)
+
+numero2 = input('Digite o maior numero: ')
+while not numero2.isnumeric():
+    numero2 = input('Digite o maior numero: ')
+numero2 = int(numero2)
+
+if numero1 > numero2:
+    aux = numero1
+    numero1 = numero2
+    numero2 = aux
+
+while True:
+    if numero1 == numero2-1:
+        break
+    numero1 += 1
+    print(numero1)
